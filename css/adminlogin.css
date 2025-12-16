@@ -1,0 +1,232 @@
+/* ==============================
+   RELIANCE TRAVELS - ADMIN LOGIN UI
+   Modern Professional Glass UI (2025)
+============================== */
+
+:root {
+    --pink: #ff1b85;
+    --pink-light: #ff4da3;
+    --pink-dark: #d9006c;
+    --gradient-pink: linear-gradient(135deg, #ff1b85 0%, #d9006c 100%);
+    --white: #ffffff;
+    --shadow-lg: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Animated Background */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 20% 30%, #ff4da3, transparent 40%),
+                radial-gradient(circle at 80% 70%, #764ba2, transparent 50%),
+                linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🔹 Floating Glow Orbs */
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    animation: float 10s infinite alternate ease-in-out;
+}
+body::before {
+    width: 400px;
+    height: 400px;
+    background: var(--pink-light);
+    top: -100px;
+    left: -100px;
+}
+body::after {
+    width: 300px;
+    height: 300px;
+    background: #764ba2;
+    bottom: -100px;
+    right: -80px;
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(40px); }
+}
+
+/* ==============================
+   LOGIN CONTAINER
+============================== */
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+}
+.back-btn:hover {
+    opacity: 0.8;
+    transform: translateX(-3px);
+}
+
+/* ==============================
+   LOGIN CARD
+============================== */
+.login-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 3rem 2.5rem;
+    color: var(--white);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+.login-card h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    background: var(--gradient-pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ==============================
+   INPUTS
+============================== */
+.input-box {
+    position: relative;
+    margin-bottom: 1.6rem;
+}
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: var(--pink);
+    font-size: 1.3rem;
+}
+.input-box input {
+    width: 100%;
+    padding: 1.1rem 1rem 1.1rem 3.5rem;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Added for consistent padding */
+}
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.input-box input:focus {
+    border-color: var(--pink);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 10px rgba(255, 27, 133, 0.3);
+}
+
+/* ==============================
+   BUTTON
+============================== */
+button {
+    width: 100%;
+    background: var(--gradient-pink);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(255, 27, 133, 0.4);
+}
+button:active {
+    transform: translateY(0);
+}
+
+/* ==============================
+   EXTRA LINKS
+============================== */
+.extra-links {
+    margin-top: 1.2rem;
+}
+.extra-links a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.extra-links a:hover {
+    color: var(--pink-light);
+}
+
+/* ==============================
+   ERROR MESSAGE
+============================== */
+.error-msg {
+    background: rgba(255, 77, 77, 0.8);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+    animation: shake 0.4s ease;
+}
+@keyframes shake {
+    0%,100%{ transform: translateX(0); }
+    25%{ transform: translateX(-6px); }
+    75%{ transform: translateX(6px); }
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 500px) {
+    .login-container {
+        width: 90%; /* Give some padding on small screens */
+    }
+    .login-card {
+        padding: 2rem 1.5rem;
+    }
+    .login-card h2 {
+        font-size: 2rem;
+    }
+    .input-box input {
+        font-size: 1rem;
+        padding: 1rem 1rem 1rem 3.2rem;
+    }
+}

@@ -1,0 +1,315 @@
+:root {
+    --pink: #ff1b85;
+    --pink-dark: #d9006c;
+    --gradient-pink: linear-gradient(135deg, #ff1b85 0%, #d9006c 100%);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-pink: 0 4px 16px rgba(255, 27, 133, 0.2);
+}
+
+/* -----------------------------------
+   GLOBAL STYLE
+----------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    padding: 1.5rem;
+}
+
+/* -----------------------------------
+   PAGE TITLES
+----------------------------------- */
+h1 {
+    background: var(--gradient-pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+h3 {
+    color: var(--pink);
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* -----------------------------------
+   BACK BUTTON
+----------------------------------- */
+.back {
+    display: inline-block;
+    background: var(--gradient-pink);
+    color: white;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.back:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-pink);
+    color: #fff;
+}
+
+/* -----------------------------------
+   FILTER BOX WRAPPER
+----------------------------------- */
+.filter-box {
+    display: flex;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* -----------------------------------
+   CUSTOM DROPDOWN
+----------------------------------- */
+.custom-dropdown {
+    position: relative;
+    padding: 0.8rem 1.2rem;
+    background: #fff;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.custom-dropdown:hover {
+    background: rgba(255, 27, 133, 0.05);
+    border-color: var(--pink);
+}
+
+.custom-dropdown span {
+    font-weight: 600;
+    color: var(--pink);
+}
+
+.custom-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    padding: 1rem;
+    z-index: 20;
+    margin-top: 0.5rem;
+    border: 1px solid #e0e0e0;
+}
+
+.custom-dropdown-content label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.custom-dropdown-content label:hover {
+    background: rgba(255, 27, 133, 0.1);
+}
+
+/* -----------------------------------
+   FILTER SUBMIT BUTTON
+----------------------------------- */
+input[type="submit"] {
+    background: var(--gradient-pink);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-pink);
+}
+
+/* -----------------------------------
+   TABLE STYLING
+----------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th {
+    background: var(--gradient-pink);
+    color: white;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+td {
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: rgba(255, 27, 133, 0.05);
+    transform: scale(1.01);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* -----------------------------------
+   DELETE BUTTON
+----------------------------------- */
+.delete-button {
+    background: var(--gradient-pink);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: var(--shadow-md);
+}
+
+.delete-button:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-pink);
+}
+
+/* -----------------------------------
+   INSERT BUTTON
+----------------------------------- */
+.insert-button {
+    display: inline-block;
+    background: #28a745;
+    padding: 1rem 1.8rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.insert-button:hover {
+    background: #1f7f36;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* -----------------------------------
+   SUCCESS MESSAGE
+----------------------------------- */
+.success-message {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border: 2px solid #28a745;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    body {
+        padding: 1rem;
+    }
+
+    .filter-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .custom-dropdown {
+        width: 100%;
+    }
+
+    table {
+        font-size: 1.1rem;
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    table {
+        font-size: 1rem;
+    }
+
+    th, td {
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+
+    .filter-box {
+        padding: 1rem;
+    }
+}

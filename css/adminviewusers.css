@@ -1,0 +1,145 @@
+:root {
+    --pink: #ff1b85;
+    --pink-dark: #d9006c;
+    --gradient-pink: linear-gradient(135deg, #ff1b85 0%, #d9006c 100%);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-pink: 0 4px 16px rgba(255, 27, 133, 0.2);
+}
+
+/* adminviewusers.css */
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 1.5rem;
+    color: #333;
+}
+
+h1 {
+    background: var(--gradient-pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 0 0 1.5rem 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+table {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-md);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+table, th, td {
+    border: none;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+th {
+    background: var(--gradient-pink);
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+tbody tr:hover {
+    background: rgba(255, 27, 133, 0.1);
+    transform: scale(1.01);
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Back button */
+.back-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--gradient-pink);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.back-btn:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-pink);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+
+    table {
+        font-size: 1.1rem;
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        padding: 0.8rem;
+    }
+
+    table {
+        font-size: 1rem;
+    }
+
+    th, td {
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+}
